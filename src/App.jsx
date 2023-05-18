@@ -4,6 +4,7 @@ import viteLogo from "/vite.svg";
 import "./App.css";
 
 const url = import.meta.env.VITE_SUPABASE_URL;
+const apiKey = import.meta.env.VITE_SUPABASE_API_KEY;
 
 function App() {
   const [count, setCount] = useState(0);
@@ -18,13 +19,13 @@ function App() {
           <img src={reactLogo} className="logo react" alt="React logo" />
         </a>
       </div>
-      <h1>Vite + React</h1>
+      <h1>Env variables test</h1>
       <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
         <p>
-          Edit <span style={{ color: "red" }}>{url}</span> and save to test HMR
+          Supabase URL: <span style={{ color: "red" }}>{url}</span>
+        </p>
+        <p>
+          Supabase API KEY: <span style={{ color: "red" }}>{apiKey}</span>
         </p>
       </div>
       <p className="read-the-docs">
